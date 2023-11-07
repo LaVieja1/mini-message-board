@@ -2,10 +2,11 @@ var express = require('express');
 var router = express.Router();
 const mongoose = require('mongoose');
 const Message = require('../models/message');
+require('dotenv').config()
 
 /* Connect to MongoDB */
 mongoose
-  .connect('mongodb+srv://canosantiago404:Klt9eVvhlCP2nFQZ@cluster0.fstf54n.mongodb.net/mini-message-board?retryWrites=true&w=majority')
+  .connect(process.env.DB_URL)
   .then((x) =>
     console.log(`Connected the Database: "${x.connections[0].name}"`)
   )
