@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Escriba su mensaje</p>
+    <main>
+        <form action="/new" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="userName">
+
+            <label for="message">Mensaje:</label>
+            <textarea name="userMessage" id="message-text" cols="30" rows="10"></textarea>
+            
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </main>
+  </body>
+</html>
