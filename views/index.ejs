@@ -5,9 +5,10 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="/new">Añadir un mensaje</a>
+    <header>
+      <h1><%= title %></h1>
+      <a href="/new">Añadir un mensaje</a>
+    </header>
     <main>
       <ul>
         <% messages.forEach(message => { %>
@@ -17,5 +18,8 @@
         <% }); %>
       </ul>
     </main>
+    <footer>
+      <h2>Santiago Cano 2023</h2>
+    </footer>
   </body>
 </html>
