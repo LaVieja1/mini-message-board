@@ -7,5 +7,14 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <main>
+      <ul>
+        <% messages.forEach(message => { %>
+          <li>
+              <%= `${message.user}: ${message.text} (${message.added.toLocaleString()})` %>
+          </li>
+        <% }); %>
+      </ul>
+    </main>
   </body>
 </html>
